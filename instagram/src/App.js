@@ -10,6 +10,8 @@ class App extends Component {
     return (
       <div className="App App">
         <SearchBar className="App-header"/>
+        <PostContainer />
+        <CommentSection />
       </div>
     );
   }
