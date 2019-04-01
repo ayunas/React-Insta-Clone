@@ -1,4 +1,5 @@
 import React from 'react';
+import './SearchBar.css';
 import person from './person.jpg';
 import heart from './heart.png';
 import logo from './instagram-logo.png';
@@ -10,14 +11,20 @@ class SearchBar extends React.Component {
     render() {
 
         return (
-            
+
             <header> 
-                <img src={logo}/>
-                <img src={text}/>
-                <div>search</div>
-                <img src={diamond}/>
-                <img src={heart}/>
-                <img src={person}/>
+                <div>
+                    <img className='search-img'src={logo}/>
+                    <img className='text'src={text}/>
+                </div>
+                
+                <input placeholder='search'></input>
+                
+                <div>
+                    <img className='search-img'src={diamond}/>
+                    <img className='search-img'src={heart}/>
+                    <img className='search-img'src={person}/>
+                </div>
             </header>
         )
     }
