@@ -1,4 +1,35 @@
 
+* {
+    box-sizing: border-box;
+}
+
 .icon {
-    width: 50px;
+    width: 40px;
+    margin: 10px;
+}
+
+.post-container {
+    border: 1px solid black;
+    margin: 10px;
+}
+
+.thumbnail {
+
+    border-radius: 50%;
+    width: 75px;
+    vertical-align: middle;
+
+}
+
+#username {
+    display: inline-block;
+    border: 1px solid red;
+    padding: 10px 0;
+    margin-left: 10px;
+
+}
+
+figure {
+    border: 1px solid green;
+
 }

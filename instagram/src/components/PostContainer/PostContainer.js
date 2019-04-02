@@ -14,18 +14,21 @@ class PostContainer extends React.Component {
         console.log(this.props.thumbnail);
 
         return (
-            <div>
+            <div className='post-container'>
                 <figure>
-                    <img src={this.props.thumbnail} alt='avatar'/>
-                    <figcaption>{this.props.user}</figcaption>
+                    <img src={this.props.thumbnail} alt='avatar' className='thumbnail'/>
+                    <figcaption id='username'>{this.props.user}</figcaption>
                 </figure>
                 
                 <figure>
 
                     <img src={this.props.image} alt='image'></img>
                     <FontAwesomeIcon icon="heart" />
-                    <img src={heart} alt='heart' className='icon'/>
-                    <img src={speech} alt='speech' className='icon'/>
+
+                    <div className='icon-container'>
+                        <img src={heart} alt='heart' className='icon'/>
+                        <img src={speech} alt='speech' className='icon'/>
+                    </div>
 
                     <figcaption>{this.props.likes} likes</figcaption>
                     {this.props.comments.map( comment => <figcaption>{comment}</figcaption> )}
