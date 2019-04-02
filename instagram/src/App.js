@@ -20,6 +20,8 @@ class App extends Component {
       <div>
         <SearchBar />
         {this.state.data.map( post => <PostContainer 
+        thumbnail={post.thumbnailUrl}
+        image={post.imageUrl}
         likes={post.likes}
         user={post.username}
         comments={post.comments.map( comment => comment.text)}
