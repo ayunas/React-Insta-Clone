@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import heart from '../SearchBar/heart.png'
 import speech from './speech.png'
 import { faIgloo } from '@fortawesome/free-solid-svg-icons'
+import CommentSection from '../CommentSection/CommentSection';
 library.add(faIgloo)
 
 
@@ -21,7 +22,6 @@ class PostContainer extends React.Component {
                 </figure>
                 
                 <figure>
-
                     <img src={this.props.image} alt='image'></img>
                     <FontAwesomeIcon icon="heart" />
 
@@ -30,10 +30,11 @@ class PostContainer extends React.Component {
                         <img src={speech} alt='speech' className='icon'/>
                     </div>
 
-                    <figcaption>{this.props.likes} likes</figcaption>
-                    {this.props.comments.map( comment => <figcaption>{comment}</figcaption> )}
-                    {this.props.userComments.map( comment => <figcaption>{comment}</figcaption> )}
+                    <strong><em><figcaption>{this.props.likes} likes</figcaption></em></strong>
+                    <em>{this.props.comments.map( comment => <figcaption>{comment}</figcaption> )}</em>
+                    <strong>{this.props.userComments.map( comment => <figcaption>{comment}</figcaption> )}</strong>
                 </figure>
+                <CommentSection />
             </div>
             
         )

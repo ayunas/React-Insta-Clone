@@ -23,13 +23,11 @@
 
 #username {
     display: inline-block;
-    border: 1px solid red;
     padding: 10px 0;
     margin-left: 10px;
 
 }
 
 figure {
-    border: 1px solid green;
-
+    
 }
