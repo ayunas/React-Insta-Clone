@@ -6,13 +6,17 @@ import heart from '../SearchBar/heart.png'
 import speech from './speech.png'
 import { faIgloo } from '@fortawesome/free-solid-svg-icons'
 import CommentSection from '../CommentSection/CommentSection';
-library.add(faIgloo)
+import moment from 'moment';
+library.add(faIgloo);
+
 
 
 class PostContainer extends React.Component {
 
     render() {
         console.log(this.props.thumbnail);
+        const date = moment('2019-04-01').fromNow()
+        console.log(date);
 
         return (
             <div className='post-container'>
@@ -34,6 +38,7 @@ class PostContainer extends React.Component {
                     <em>{this.props.comments.map( comment => <figcaption>{comment}</figcaption> )}</em>
                     <strong>{this.props.userComments.map( comment => <figcaption>{comment}</figcaption> )}</strong>
                 </figure>
+                <p>{date}</p>
                 <CommentSection />
             </div>
             

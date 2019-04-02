@@ -18,7 +18,7 @@ class SearchBar extends React.Component {
                     <img className='text'src={text}/>
                 </div>
                 
-                <input placeholder='search'></input>
+                <input id='search-bar' placeholder='search'></input>
                 
                 <div>
                     <img className='search-img'src={diamond}/>

@@ -10,7 +10,12 @@
 
 .post-container {
     border: 1px solid black;
+    width: 700px;
     margin: 10px;
+}
+
+.post-container p {
+    margin-left: 40px;
 }
 
 .thumbnail {
@@ -28,6 +33,6 @@
 
 }
 
-figure {
-    
+.comment-section {
+
 }

@@ -1,4 +1,5 @@
 import React from 'react';
+import './CommentSection.css';
 
 
 class CommentSection extends React.Component {
@@ -6,12 +7,7 @@ class CommentSection extends React.Component {
     render() {
 
         return (
-
-            <section>
-                Comments here please!
-            </section>
-
-
+            <input id='comment' placeholder='Add a comment'/>
         )
     }
 }

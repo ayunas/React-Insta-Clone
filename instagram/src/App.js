@@ -19,7 +19,7 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <div className='App'>
         <SearchBar />
         {this.state.data.map( post => <PostContainer 
         thumbnail={post.thumbnailUrl}
@@ -30,7 +30,6 @@ class App extends Component {
         userComments={post.comments.map( comment => comment.username )}
         id={post.id}
         /> ) }
-        <CommentSection />
       </div>
     );
   }
