@@ -1,0 +1,38 @@
+
+* {
+    box-sizing: border-box;
+}
+
+.icon {
+    width: 40px;
+    margin: 10px;
+}
+
+.post-container {
+    border: 1px solid black;
+    width: 700px;
+    margin: 10px;
+}
+
+.post-container p {
+    margin-left: 40px;
+}
+
+.thumbnail {
+
+    border-radius: 50%;
+    width: 75px;
+    vertical-align: middle;
+
+}
+
+#username {
+    display: inline-block;
+    padding: 10px 0;
+    margin-left: 10px;
+
+}
+
+.comment-section {
+
+}
