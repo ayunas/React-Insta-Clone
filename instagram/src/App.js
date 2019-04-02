@@ -10,19 +10,22 @@ class App extends Component {
 
   constructor() {
     super();
-    
     this.state = {
-      data : {dummyData}
+      data : dummyData,
     }
   }
 
   render() {
-    console.dir(this.state.data.dummyData[0].imageUrl);
     return (
       <div>
         <SearchBar />
-        
-        <PostContainer />
+        {this.state.data.map( post => <PostContainer 
+        likes={post.likes}
+        user={post.username}
+        comments={post.comments.map( comment => comment.text)}
+        userComments={post.comments.map( comment => comment.username )}
+        id={post.id}
+        /> ) }
         <CommentSection />
       </div>
     );
