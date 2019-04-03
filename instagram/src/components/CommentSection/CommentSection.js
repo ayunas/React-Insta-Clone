@@ -29,13 +29,23 @@ class CommentSection extends React.Component {
     render() {
         const date = moment('2019-04-01').fromNow()
         return (
-            <div>
-                {this.state.comments.map( comment => <p>{comment}</p>)}
-                {this.state.username.map( user => <p><strong>{user}</strong></p>)}
-                <p>{date}</p>
-                <form onSubmit={this.addNewComment}>
-                    <input id='comment' placeholder='Add a comment'/>
-                </form>
+            <div id='commentsection'>
+                
+                <div className='users divvy'>
+                    {this.state.username.map( user => <p class='user'><strong>{user} : </strong></p>)}
+                </div>
+
+                <div className='comments divvy'>
+                    {this.state.comments.map( comment => <p class='comment'>{comment}</p>)}
+                </div>
+                
+                <div className='form divvy'>
+                    <p>{date}</p>
+                    <form onSubmit={this.addNewComment}>
+                        <input id='comment' placeholder='Add a comment'/>
+                    </form>
+                </div>
+                
             </div>
             
             

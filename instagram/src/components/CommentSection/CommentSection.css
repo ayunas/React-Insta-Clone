@@ -3,3 +3,31 @@ input#comment {
     width: 100%;
     height: 40px;
 }
+
+.divvy {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+.comments {
+}
+
+.users {
+}
+
+.form {
+    flex-basis: 100%;
+}
+
+p.comment {
+}
+
+p.user {
+}
+
+#commentsection {
+    display: flex;
+    flex-wrap: wrap;
+}
