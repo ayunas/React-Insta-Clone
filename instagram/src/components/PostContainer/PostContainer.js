@@ -1,22 +1,17 @@
 import React from 'react';
 import './PostContainer.css'
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import heart from '../SearchBar/heart.png'
 import speech from './speech.png'
-import { faIgloo } from '@fortawesome/free-solid-svg-icons'
 import CommentSection from '../CommentSection/CommentSection';
-import moment from 'moment';
-library.add(faIgloo);
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHeart } from '@fortawesome/free-solid-svg-icons';
+import { faHeart as faHeartO } from '@fortawesome/free-regular-svg-icons';
+import { faComment } from '@fortawesome/free-regular-svg-icons';
 
 
 class PostContainer extends React.Component {
 
     render() {
-        console.log(this.props.thumbnail);
-        const date = moment('2019-04-01').fromNow()
-        console.log(date);
 
         return (
             <div className='post-container'>
@@ -27,19 +22,19 @@ class PostContainer extends React.Component {
                 
                 <figure>
                     <img src={this.props.image} alt='image'></img>
-                    <FontAwesomeIcon icon="heart" />
 
                     <div className='icon-container'>
-                        <img src={heart} alt='heart' className='icon'/>
-                        <img src={speech} alt='speech' className='icon'/>
+                        <FontAwesomeIcon icon={faHeartO} size='2x' className='fa-icon'/>
+                        <FontAwesomeIcon icon={faComment} size='2x' className='fa-icon'/>
                     </div>
 
                     <strong><em><figcaption>{this.props.likes} likes</figcaption></em></strong>
-                    <em>{this.props.comments.map( comment => <figcaption>{comment}</figcaption> )}</em>
-                    <strong>{this.props.userComments.map( comment => <figcaption>{comment}</figcaption> )}</strong>
+                    
+                    <CommentSection comments = {this.props.comments} />
+                    
                 </figure>
-                <p>{date}</p>
-                <CommentSection />
+                
+                
             </div>
             
         )

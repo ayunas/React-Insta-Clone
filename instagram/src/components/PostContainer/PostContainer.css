@@ -15,7 +15,7 @@
 }
 
 .post-container p {
-    margin-left: 40px;
+    padding: 0 10px;
 }
 
 .thumbnail {
@@ -25,6 +25,12 @@
     vertical-align: middle;
 
 }
+
+.fa-icon {
+    margin: 10px;
+}
+
+
 
 #username {
     display: inline-block;
