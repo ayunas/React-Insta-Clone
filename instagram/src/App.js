@@ -13,7 +13,7 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      data : dummyData,
+      data : []
     }
   }
 
@@ -26,13 +26,24 @@ class App extends Component {
         image={post.imageUrl}
         likes={post.likes}
         user={post.username}
-        comments={post.comments.map( comment => comment.text)}
-        userComments={post.comments.map( comment => comment.username )}
+        comments={post.comments}
         id={post.id}
         /> ) }
       </div>
     );
   }
+
+  componentDidMount() {
+    //fetch API
+    // apiData
+
+    this.setState( {
+      data : dummyData
+    }, ()=> console.log(this.state.data));
+
+    
+  }
+
 }
 
 export default App;

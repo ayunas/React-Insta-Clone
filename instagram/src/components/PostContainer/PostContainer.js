@@ -14,9 +14,7 @@ library.add(faIgloo);
 class PostContainer extends React.Component {
 
     render() {
-        console.log(this.props.thumbnail);
         const date = moment('2019-04-01').fromNow()
-        console.log(date);
 
         return (
             <div className='post-container'>
@@ -35,11 +33,10 @@ class PostContainer extends React.Component {
                     </div>
 
                     <strong><em><figcaption>{this.props.likes} likes</figcaption></em></strong>
-                    <em>{this.props.comments.map( comment => <figcaption>{comment}</figcaption> )}</em>
-                    <strong>{this.props.userComments.map( comment => <figcaption>{comment}</figcaption> )}</strong>
+                    <CommentSection comments = {this.props.comments} />
                 </figure>
                 <p>{date}</p>
-                <CommentSection />
+                
             </div>
             
         )
