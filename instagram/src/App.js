@@ -17,10 +17,23 @@ class App extends Component {
     }
   }
 
+  search = (e) => {
+    e.preventDefault();
+    console.dir(e.target.children[0].value);
+    console.log('searching...');
+    console.log(this.state.data[0].username);
+    const user = this.state.data.filter(post => post.username === e.target.children[0].value);
+    console.log(user);
+    this.setState( {
+      data : user
+    });
+    // const id = user[0].id;
+}
+
   render() {
     return (
       <div className='App'>
-        <SearchBar />
+        <SearchBar data={this.state.data} search={this.search} />
         {this.state.data.map( post => <PostContainer 
         thumbnail={post.thumbnailUrl}
         image={post.imageUrl}
