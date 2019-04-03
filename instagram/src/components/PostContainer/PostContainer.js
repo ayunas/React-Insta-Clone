@@ -13,7 +13,8 @@ class PostContainer extends React.Component {
     constructor(props) {
         super(props);
        this.state = {
-           liked : false
+           liked : false,
+           tally : this.props.likes
        }
     }
 
@@ -21,7 +22,12 @@ class PostContainer extends React.Component {
         this.setState( {
             liked : !this.state.liked
         })
-        console.log(this.state.liked);
+
+        if (this.state.liked === true) {
+            this.setState( {
+                tally : this.state.tally + 1
+            })
+        }
     }
 
     render() {
@@ -41,7 +47,7 @@ class PostContainer extends React.Component {
                         <FontAwesomeIcon icon={faComment} size='2x' className='fa-icon'/>
                     </div>
 
-                    <strong><em><figcaption>{this.props.likes} likes</figcaption></em></strong>
+                    <strong><em><figcaption>{this.state.tally} likes</figcaption></em></strong>
                     
                     <CommentSection comments = {this.props.comments} />
                     
