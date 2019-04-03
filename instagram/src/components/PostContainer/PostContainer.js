@@ -10,9 +10,22 @@ import { faComment } from '@fortawesome/free-regular-svg-icons';
 
 
 class PostContainer extends React.Component {
+    constructor(props) {
+        super(props);
+       this.state = {
+           liked : false
+       }
+    }
+
+    like = () => {
+        this.setState( {
+            liked : !this.state.liked
+        })
+        console.log(this.state.liked);
+    }
 
     render() {
-
+        
         return (
             <div className='post-container'>
                 <figure>
@@ -24,7 +37,7 @@ class PostContainer extends React.Component {
                     <img src={this.props.image} alt='image'></img>
 
                     <div className='icon-container'>
-                        <FontAwesomeIcon icon={faHeartO} size='2x' className='fa-icon'/>
+                        <FontAwesomeIcon icon={this.state.liked ? faHeart : faHeartO} size='2x' className='fa-icon' onClick={this.like}/>
                         <FontAwesomeIcon icon={faComment} size='2x' className='fa-icon'/>
                     </div>
 
