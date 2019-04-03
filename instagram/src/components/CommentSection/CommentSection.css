@@ -1,4 +1,9 @@
 
+#commentsection {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 input#comment {
     width: 100%;
     height: 40px;
@@ -7,27 +12,20 @@ input#comment {
 .divvy {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    /* align-items: center; */
+    justify-content: space-between;
+    align-items:  flex-start;
 }
 
 .comments {
+    flex-basis: 50%;
+    justify-content: flex-start;
 }
 
 .users {
+    padding-top: 15px;
 }
 
 .form {
     flex-basis: 100%;
-}
-
-p.comment {
-}
-
-p.user {
-}
-
-#commentsection {
-    display: flex;
-    flex-wrap: wrap;
+    
 }
