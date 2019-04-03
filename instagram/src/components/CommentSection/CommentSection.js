@@ -20,7 +20,8 @@ class CommentSection extends React.Component {
         // console.dir(e.target.children[0].value);
         // console.dir(this.state.comments);
         this.setState( {
-            comments : this.state.comments.concat(e.target.children[0].value)
+            comments : this.state.comments.concat(e.target.children[0].value),
+            username : this.state.username.concat('newuser')
         })
 
     }
