@@ -34,14 +34,9 @@ class App extends Component {
   }
 
   componentDidMount() {
-    //fetch API
-    // apiData
-
     this.setState( {
       data : dummyData
     }, ()=> console.log(this.state.data));
-
-    
   }
 
 }

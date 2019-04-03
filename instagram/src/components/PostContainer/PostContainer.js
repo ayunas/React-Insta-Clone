@@ -4,17 +4,15 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import heart from '../SearchBar/heart.png'
 import speech from './speech.png'
-import { faIgloo } from '@fortawesome/free-solid-svg-icons'
 import CommentSection from '../CommentSection/CommentSection';
-import moment from 'moment';
-library.add(faIgloo);
+
+
 
 
 
 class PostContainer extends React.Component {
 
     render() {
-        const date = moment('2019-04-01').fromNow()
 
         return (
             <div className='post-container'>
@@ -33,9 +31,11 @@ class PostContainer extends React.Component {
                     </div>
 
                     <strong><em><figcaption>{this.props.likes} likes</figcaption></em></strong>
+                    
                     <CommentSection comments = {this.props.comments} />
+                    
                 </figure>
-                <p>{date}</p>
+                
                 
             </div>
             
