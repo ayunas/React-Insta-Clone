@@ -7,6 +7,7 @@ class CommentSection extends React.Component {
    
     constructor(props) {
         super(props)
+        this.addNewComment = this.addNewComment.bind(this);
         this.state = {
             comments : this.props.comments.map(comment => comment.text),
             username : this.props.comments.map(comment => comment.username)
@@ -14,9 +15,14 @@ class CommentSection extends React.Component {
     }
 
     addNewComment(e) {
-        console.dir(e.currentTarget);
         e.preventDefault();
-        console.log('newComment made');
+        // console.log(e, 'this comment has been entered');
+        // console.dir(e.target.children[0].value);
+        // console.dir(this.state.comments);
+        this.setState( {
+            comments : this.state.comments.concat(e.target.children[0].value)
+        })
+
     }
 
     render() {
