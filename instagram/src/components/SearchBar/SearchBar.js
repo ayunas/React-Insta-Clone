@@ -24,7 +24,6 @@ class SearchBar extends React.Component {
     // }
 
     render() {
-        console.log(this.props);
         return (
 
             <header> 

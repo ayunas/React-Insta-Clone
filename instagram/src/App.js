@@ -19,15 +19,18 @@ class App extends Component {
 
   search = (e) => {
     e.preventDefault();
-    console.dir(e.target.children[0].value);
-    console.log('searching...');
-    console.log(this.state.data[0].username);
+    // console.log('searching...');
     const user = this.state.data.filter(post => post.username === e.target.children[0].value);
     console.log(user);
-    this.setState( {
-      data : user
-    });
-    // const id = user[0].id;
+    if (user.length > 0) {
+      this.setState( {
+        data : user
+      });
+    } else if (user.length === 0) {
+      this.setState ( {
+        data : dummyData
+      })
+    }
 }
 
   render() {
