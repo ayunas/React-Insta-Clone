@@ -13,15 +13,22 @@ class CommentSection extends React.Component {
         }
     }
 
+    addNewComment(e) {
+        console.dir(e.currentTarget);
+        e.preventDefault();
+        console.log('newComment made');
+    }
+
     render() {
         const date = moment('2019-04-01').fromNow()
-       
         return (
             <div>
                 {this.state.comments.map( comment => <p>{comment}</p>)}
                 {this.state.username.map( user => <p><strong>{user}</strong></p>)}
                 <p>{date}</p>
-                <input id='comment' placeholder='Add a comment'/>
+                <form onSubmit={this.addNewComment}>
+                    <input id='comment' placeholder='Add a comment'/>
+                </form>
             </div>
             
             

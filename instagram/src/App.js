@@ -36,9 +36,8 @@ class App extends Component {
   componentDidMount() {
     this.setState( {
       data : dummyData
-    }, ()=> console.log(this.state.data));
+    });
   }
-
 }
 
 export default App;
