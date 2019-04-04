@@ -5,6 +5,7 @@ import './App.css';
 import SearchBar from './components/SearchBar/SearchBar'
 import PostContainer from './components/PostContainer/PostContainer'
 import CommentSection from './components/CommentSection/CommentSection'
+import PostsPage from './components/PostContainer/PostsPage'
 
 class App extends Component {
 
@@ -35,15 +36,7 @@ class App extends Component {
   render() {
     return (
       <div className='App'>
-        <SearchBar data={this.state.data} search={this.search} />
-        {this.state.data.map( post => <PostContainer 
-        thumbnail={post.thumbnailUrl}
-        image={post.imageUrl}
-        likes={post.likes}
-        user={post.username}
-        comments={post.comments}
-        id={post.id}
-        /> ) }
+        <PostsPage data={this.state.data} search={this.search}/>
       </div>
     );
   }
