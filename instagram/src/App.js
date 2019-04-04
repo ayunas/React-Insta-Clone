@@ -6,6 +6,12 @@ import SearchBar from './components/SearchBar/SearchBar'
 import PostContainer from './components/PostContainer/PostContainer'
 import CommentSection from './components/CommentSection/CommentSection'
 import PostsPage from './components/PostContainer/PostsPage'
+import withAuthenticate from './components/Authentication/withAuthenticate';
+
+const AuthenticatedComponent = withAuthenticate(PostsPage);
+
+
+
 
 class App extends Component {
 
@@ -36,7 +42,8 @@ class App extends Component {
   render() {
     return (
       <div className='App'>
-        <PostsPage data={this.state.data} search={this.search}/>
+        {/* <PostsPage data={this.state.data} search={this.search} /> */}
+        <AuthenticatedComponent data={this.state.data} search={this.search} />
       </div>
     );
   }
