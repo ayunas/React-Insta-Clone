@@ -19,15 +19,21 @@ class PostContainer extends React.Component {
     }
 
     like = () => {
+        
+        console.log(this.state.liked);
+
         this.setState( {
             liked : !this.state.liked
-        })
-
-        if (this.state.liked === true) {
+        }, () => { 
+            if (this.state.liked === true) {
             this.setState( {
                 tally : this.state.tally + 1
             })
-        }
+        } })
+
+        console.log(this.state.liked);
+
+        
     }
 
     render() {    

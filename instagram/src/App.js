@@ -6,8 +6,6 @@ import SearchBar from './components/SearchBar/SearchBar'
 import PostContainer from './components/PostContainer/PostContainer'
 import CommentSection from './components/CommentSection/CommentSection'
 
-
-
 class App extends Component {
 
   constructor() {
@@ -19,9 +17,10 @@ class App extends Component {
 
   search = (e) => {
     e.preventDefault();
-    // console.log('searching...');
+    console.log('searching...');
     const user = this.state.data.filter(post => post.username === e.target.children[0].value);
     console.log(user);
+
     if (user.length > 0) {
       this.setState( {
         data : user

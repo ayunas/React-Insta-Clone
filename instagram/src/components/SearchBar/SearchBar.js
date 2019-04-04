@@ -8,21 +8,6 @@ import diamond from './circle-diamond.png';
 
 class SearchBar extends React.Component {
 
-    constructor(props) {
-        super(props);
-        this.state = {
-            // comments : this.props.data.map()
-        }
-    }
-
-    // search = (e) => {
-    //     e.preventDefault();
-    //     // console.dir(e.target.children[0].value);
-    //     console.log('searching...');
-    //     const user = this.props.data.filter(post => post.username === e.target.children[0].value);
-    //     const id = user[0].id;
-    // }
-
     render() {
         return (
 
@@ -34,7 +19,6 @@ class SearchBar extends React.Component {
                 <form onSubmit={this.props.search}>
                 <input id='search-bar' placeholder='search'></input>
                 </form>
-                
                 
                 <div>
                     <img className='search-img'src={diamond}/>
