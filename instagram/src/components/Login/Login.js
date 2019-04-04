@@ -1,18 +1,16 @@
 import React from 'react';
 
-const Login = () => {
+class Login extends React.Component {
 
-    return (
-
-        <div>
-            <input placeholder='username'></input>
-            <input placeholder='password'></input>
-            <button>Login</button>
-        </div>
-    )
-
-
+    render() {
+        return (
+            <div>
+                <input placeholder='username'></input>
+                <input placeholder='password'></input>
+                <button>Login</button>
+            </div>
+        )
+    } 
 }
-
 
 export default Login;

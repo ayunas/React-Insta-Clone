@@ -7,6 +7,7 @@ import PostContainer from './components/PostContainer/PostContainer'
 import CommentSection from './components/CommentSection/CommentSection'
 import PostsPage from './components/PostContainer/PostsPage'
 import withAuthenticate from './components/Authentication/withAuthenticate';
+import Login from './components/Login/Login'
 
 const AuthenticatedComponent = withAuthenticate(PostsPage);
 
@@ -41,6 +42,7 @@ class App extends Component {
       <div className='App'>
         {/* <PostsPage data={this.state.data} search={this.search} /> */}
         <AuthenticatedComponent data={this.state.data} search={this.search} />
+        <Login />
       </div>
     );
   }
