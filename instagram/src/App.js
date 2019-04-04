@@ -10,9 +10,6 @@ import withAuthenticate from './components/Authentication/withAuthenticate';
 
 const AuthenticatedComponent = withAuthenticate(PostsPage);
 
-
-
-
 class App extends Component {
 
   constructor() {
