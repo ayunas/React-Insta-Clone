@@ -3,17 +3,18 @@ import './PostContainer.css';
 import SearchBar from '../SearchBar/SearchBar'
 import PostContainer from './PostContainer'
 import styled from 'styled-components';
-
+import { Button } from 'reactstrap';
 
 const Divvy = styled.div`
-    text-align: left;
+    text-align: right;
 `;
 
 const PostsPage = (props) => {
 
     return (
-        <div>
+        <Divvy>
             <SearchBar data={props.data} search={props.search} />
+            <Button color='danger' onClick={props.logout} size='lg'>Logout</Button>
         {
             props.data.map( post => <PostContainer 
             thumbnail={post.thumbnailUrl}
@@ -25,8 +26,7 @@ const PostsPage = (props) => {
             /> 
             ) 
         }
-            <button onClick={props.logout}>Logout</button>
-        </div>
+        </Divvy>
     )
 }
 
