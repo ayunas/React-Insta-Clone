@@ -58,7 +58,7 @@ class App extends Component {
   render() {
     return (
       <Divvy className='App'>
-        { localStorage.length === 0 ? <Login /> : <AuthenticatedComponent data={this.state.data} search={this.search} logout={this.logout} /> }
+        { (localStorage.length === 2 && localStorage.username !== '' && localStorage.password !== '') ? <AuthenticatedComponent data={this.state.data} search={this.search} logout={this.logout} /> : <Login /> }
       </Divvy>
     );
   }
