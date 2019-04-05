@@ -1,7 +1,8 @@
 header {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    justify-content: flex-start;
     padding: 20px;
     border-bottom: 1px solid lightgray;
 }
@@ -12,11 +13,11 @@ header {
 }
 
 .text {
-    width: 100px;
+    width: 150px;
 }
-
+/* 
 #search-bar {
-    width: 200px;
+    width: 50%;
     height: 30px;
     text-align: center;
-}
+} */

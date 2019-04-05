@@ -7,9 +7,16 @@ import PostContainer from './components/PostContainer/PostContainer'
 import CommentSection from './components/CommentSection/CommentSection'
 import PostsPage from './components/PostContainer/PostsPage'
 import withAuthenticate from './components/Authentication/withAuthenticate';
-import Login from './components/Login/Login'
+import Login from './components/Login/Login';
+import styled from 'styled-components';
+
 
 const AuthenticatedComponent = withAuthenticate(PostsPage);
+const Divvy = styled.div`
+height: 100%;
+padding: 30px 10px;
+margin: 30px 30px 0 30px;
+`;
 
 class App extends Component {
 
@@ -50,9 +57,9 @@ class App extends Component {
 
   render() {
     return (
-      <div className='App'>
+      <Divvy className='App'>
         { localStorage.length === 0 ? <Login /> : <AuthenticatedComponent data={this.state.data} search={this.search} logout={this.logout} /> }
-      </div>
+      </Divvy>
     );
   }
 

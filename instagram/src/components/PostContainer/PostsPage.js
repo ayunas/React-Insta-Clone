@@ -2,6 +2,12 @@ import React from 'react';
 import './PostContainer.css';
 import SearchBar from '../SearchBar/SearchBar'
 import PostContainer from './PostContainer'
+import styled from 'styled-components';
+
+
+const Divvy = styled.div`
+    text-align: left;
+`;
 
 const PostsPage = (props) => {
 
