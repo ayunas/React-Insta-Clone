@@ -47,6 +47,7 @@ class Login extends React.Component {
 
     login = (e) => {
         e.preventDefault();
+        console.log(localStorage.username);
         localStorage.setItem('username', this.userNameInput.current.value);
         localStorage.setItem('password', this.passwordInput.current.value);
         this.render();
