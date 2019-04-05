@@ -4,8 +4,6 @@ import SearchBar from '../SearchBar/SearchBar'
 import PostContainer from './PostContainer'
 
 const PostsPage = (props) => {
-    
-    console.log(props);
 
     return (
         <div>
@@ -21,9 +19,8 @@ const PostsPage = (props) => {
             /> 
             ) 
         }
+            <button onClick={props.logout}>Logout</button>
         </div>
-
-
     )
 }
 

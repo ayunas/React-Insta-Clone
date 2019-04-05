@@ -37,12 +37,21 @@ class App extends Component {
     }
 }
 
+  logout = () => {
+    localStorage.clear();
+    console.log('you are logged out');
+    console.log(localStorage);
+    window.location.reload();
+    // this.setState( {
+    //   data : []
+    // });
+  }
+
+
   render() {
     return (
       <div className='App'>
-        {/* <PostsPage data={this.state.data} search={this.search} /> */}
-        <AuthenticatedComponent data={this.state.data} search={this.search} />
-        <Login />
+        { localStorage.length === 0 ? <Login /> : <AuthenticatedComponent data={this.state.data} search={this.search} logout={this.logout} /> }
       </div>
     );
   }
