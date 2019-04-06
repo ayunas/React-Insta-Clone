@@ -12,6 +12,7 @@
     border: 1px solid black;
     width: 700px;
     margin: 10px;
+    text-align: left;
 }
 
 .post-container p {
@@ -19,26 +20,18 @@
 }
 
 .thumbnail {
-
+    text-align: left;
     border-radius: 50%;
     width: 75px;
     vertical-align: middle;
-
 }
 
 .fa-icon {
     margin: 10px;
 }
 
-
-
 #username {
     display: inline-block;
     padding: 10px 0;
     margin-left: 10px;
-
-}
-
-.comment-section {
-
 }
