@@ -11,7 +11,7 @@ import Login from './components/Login/Login';
 import styled from 'styled-components';
 
 
-const AuthenticatedComponent = withAuthenticate(PostsPage);
+const AuthenticatedComponent = withAuthenticate(PostsPage, Login);
 const Divvy = styled.div`
 height: 100%;
 padding: 30px 10px;

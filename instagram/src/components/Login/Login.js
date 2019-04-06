@@ -65,7 +65,7 @@ class Login extends React.Component {
                 <FontAwesomeIcon icon={faImages} size='6x' /><br/>
                 <Formy>
                     <Inputy name={this.state.username} placeholder='username' ref={this.userNameInput} value={this.userNameInput.value} onChange={this.login} /><br/>
-                    <Inputy name={this.state.password} placeholder='password' ref={this.passwordInput} value={this.passwordInput.value} onChange={this.login} /><br/>
+                    <Inputy name={this.state.password} placeholder='password' type='password' ref={this.passwordInput} value={this.passwordInput.value} onChange={this.login} /><br/>
                     <Buttony>Login</Buttony>
                 </Formy>
             </Divvy>
